@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url(https://c.tenor.com/mannqKm5-NQAAAAi/bangladesh-gifgari.gif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #4C516D;
+}
+h1{
+    text-align: center;
+    padding: 30px 0;
+    color: #E0FFFF;
+}
+h1 span{
+    font-weight: bold;
+    border: 5px solid yellow;
+    padding: 5px;
+    background: linear-gradient(to right, red, green);
+    border-radius: 50%;
+    animation: anim2 2s linear infinite;
+    color: aqua;
+}
+@keyframes anim2{
+    100%{
+        background: linear-gradient(to left, red, green);
+    }
+}
+.container{
+    width: 800px;
+    height: 350px;
+    position: absolute;
+    border: 10px solid transparent;
+    
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    border-image: -webkit-gradient(linear,right top,left top,
+                    from(green),to(red));
+    border-image: linear-gradient(right,green,red);
+    border-image-slice: 1;
+    animation: anim 2s linear infinite;
+}
+@keyframes anim{
+    100%{
+        border-image: -webkit-gradient(linear,right top,left top,
+                    from(red),to(green));
+        border-image: linear-gradient(right,red,green);
+        border-image-slice: 1;
+    }
+    }
+.container img{
+    width: 800px;
+    height: 350px;
+    margin: 0 auto;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 0;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.button{
+    transform: translate(-50%,-50%);
+    top: 90%;
+    left: 50%;
+    position: absolute;
+    margin-top: 10px;
+    box-shadow: 3px 5px 8px #E1EBEE;
+}
+.button a{
+    border: 5px solid yellow;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: lowercase;
+    position: relative;
+    perspective: 100px;
+}
+.button a::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    transition: transform 1s ease;
+    transform-origin: bottom;
+    
+}
+a:hover::before{
+    transform: rotateX(25deg);
+    background-color: #fff;
+    /* color: aqua; */
+}
+@media screen and (max-width:992px){
+    .container{
+        width: 650px;
+        height: 300px;
+    }
+    .container img{
+        width: 650px;
+        height: 300px;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        width: 550px;
+        height: 250px;
+    }
+    .container img{
+        width: 550px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        width: 450px;
+        height: 200px;
+    }
+    .container img{
+        width: 450px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:500px){
+    .container{
+        width: 300px;
+        height: 150px;
+    }
+    .container img{
+        width: 300px;
+        height: 150px;
+    }
+}
+    
